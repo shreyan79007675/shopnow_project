@@ -1,0 +1,60 @@
+.H1{
+    font-size: 35px;
+    font-weight: bold;
+    margin-left: 20px;
+
+}
+.H2{
+    font-size: 1em;
+    font-weight: bold;
+    margin-left: 50px;
+
+}
+#login,
+#signin{
+  text-decoration: none;
+  float: right;
+}
+
+
+.quote{
+    margin-left: 50px;
+    margin-top: 200px;
+}
+a:hover{
+  background-color: #96C7C1;
+}
+.l1{
+  padding-left: 130px;
+  padding-top:  200px;
+
+}
+.un{
+  border-radius: 2px;
+}
+.unl{
+  border-radius: 5px;
+  width: 15%;
+  background-color: red;
+}
+
+.bold{
+  color: black;
+  font-size: 35px;
+}
+
+#div1{
+    width: 20%;
+    float: left;
+    background-color: red;
+}
+
+
+#div2{
+    width: 20%;
+    float: left;
+    background: black;
+}
+li{
+  color: white;
+}

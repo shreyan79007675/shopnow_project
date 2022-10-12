@@ -1,0 +1,382 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static '/css/styles.css' %}">
+    <link rel="icon" href="{% static 'images/favicon (1).ico' %}">
+    <title>Clothing</title>
+    <style media="screen">
+    .mbody{
+      background-color:white;
+    }
+    .ending{
+      background-color:black;
+    }
+    .H4{
+      color: white;
+    }
+    .logos{
+      float: right;
+      filter: invert(1);
+    }
+    .logos a{
+      margin-left: 5px;
+      margin-right: 15px;
+    }
+    .climg{
+      border-radius: 18px;
+      transition:transform 250ms ease-in-out;
+    }
+    .dephead{
+      margin-left: 15px;
+    }
+    .climg:hover{
+      box-shadow: 10px 20px 20px #0000002e;
+      filter:brightness(100%);
+      transform: scale(1.1);
+      transform-origin: center;
+    }
+    .add-cart{
+      background-color:#A3E4DB;
+      height: 40px;
+      width: 290px;
+      border-radius: 5px;
+      border-color: #FFF8F3;
+    }
+
+    </style>
+
+  </head>
+  <body class="mbody">
+    <br><br><br>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{% url 'userhome' %}">  <img src="{% static 'images/favicon (1).ico' %}"  alt="problem" height=95% width=95% > </a>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href=" {% url 'userhome' %}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href=" {% url 'cloth2'   %}  ">Clothing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="{% url 'groc2'   %} ">Groceries</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="{% url 'elec2'   %} ">Electronics</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="{% url 'cart'   %} ">
+                  <ion-icon name="basket"></ion-icon>Cart <span>0</span>
+                </a>
+              </li>
+            </ul>
+
+          </div>
+          <a class="nav-link active" aria-cuuent="page" id="login" href=" {% url 'home' %}"> 👤 Log out </a>
+
+        </div>
+      </nav>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+
+    <table class="clothimg"  cellpadding="25">
+      <h3 class="dephead" >MEN</h3>
+      <tr>
+        <td><img class="climg" src="{% static 'images/hoodie.jpeg' %}" alt="" height=300em width=300em></td>
+        <td><img class="climg" src="{% static 'images/shirt.jpeg' %}" alt="" height=300em width=300em></td>
+        <td><img class="climg" src="{% static 'images/tshirt.jpeg' %}" alt="" height=300em width=300em></td>
+        <td><img class="climg" src="{% static 'images/pant.jpeg' %}" alt="" height=300em width=300em></td>
+      </tr>
+      <tr cellpadding="15">
+        <td>
+          <h6>Wrogn </h6>
+          <h6>Disorder & Chaos Hoodie</h6>
+          Product - 1101 <br>
+          Price - 951 <br>
+          Rating   ⭐⭐⭐⭐⭐
+          <br><br>
+          <center><button onclick="popfun()" class="add-cart cart1" type="button" name="button">Add To Cart</button></center>
+        </td>
+        <td>
+          <h6>U.S. Polo Assn. Denim Co.</h6>
+          <h6>Men Black & White Slim Fit Printed Shirt</h6>
+          Product - 1102 <br>
+          Price - 2799 <br>
+          Rating   ⭐⭐⭐⭐
+          <br><br>
+          <center><button onclick="popfun()" class="add-cart cart2" type="button" name="button">Add To Cart</button></center>
+        </td>
+        <td>
+        <h6>Calvin Klein Jeans</h6>
+        <h6>Men Black Brand Logo T-shirt</h6>
+        Product - 1103 <br>
+        Price - 1959 <br>
+        Rating   ⭐⭐⭐⭐⭐
+        <br><br>
+        <center><button onclick="popfun()" class="add-cart cart3" type="button" name="button">Add To Cart</button></center>
+        </td>
+        <td>
+          <h6>GANT</h6>
+          <h6>Men Blue Cotton Trousers</h6>
+          Product - 1104 <br>
+          Price - 14999 <br>
+          Rating   ⭐⭐⭐⭐⭐
+          <br><br>
+          <center><button onclick="popfun()" class="add-cart cart4" type="button" name="button">Add To Cart</button></center>
+        </td>
+      </tr>
+    </table>
+    <table class="clothimg"  cellpadding="25">
+      <h3 class="dephead" >WOMEN</h3>
+        <tr>
+          <td><img class="climg" src="{% static 'images/top (1).jpeg' %}" alt="" height=300em width=300em></td>
+          <td><img class="climg" src="{% static 'images/top (2).jpeg' %}" alt="" height=300em width=300em></td>
+          <td><img class="climg" src="{% static 'images/top (3).jpeg' %}" alt="" height=300em width=300em></td>
+          <td><img class="climg" src="{% static 'images/top (4).jpeg' %}" alt="" height=300em width=300em></td>
+        </tr>
+        <tr cellpadding="15">
+          <td>
+            <h6>KASSUALLY</h6>
+            <h6>Black High Neck Peplum Top</h6>
+            Product - 1201 <br>
+            Price - 493 <br>
+            Rating   ⭐⭐⭐⭐
+            <br><br>
+            <center><button onclick="popfun()" class="add-cart cart5" type="button" name="button">Add To Cart</button></center>
+          </td>
+          <td>
+            <h6>Athena</h6>
+            <h6>Stylish Green Power Shoulders Top</h6>
+            Product - 1202 <br>
+            Price - 584 <br>
+            Rating   ⭐⭐⭐⭐
+            <br><br>
+            <center><button onclick="popfun()" class="add-cart cart6" type="button" name="button">Add To Cart</button></center>
+          </td>
+          <td>
+          <h6>Roadster</h6>
+          <h6>Black Pure Cotton Top With Roll-Up Sleeves</h6>
+          Product - 1203 <br>
+          Price - 449 <br>
+          Rating   ⭐⭐⭐⭐⭐
+          <br><br>
+          <center><button onclick="popfun()" class="add-cart cart7" type="button" name="button">Add To Cart</button></center>
+          </td>
+          <td>
+            <h6>Orchid Blues</h6>
+            <h6>Beige Georgette Fitted Crop Top</h6>
+            Product - 1204 <br>
+            Price - 584 <br>
+            Rating   ⭐⭐⭐⭐
+            <br><br>
+            <center><button onclick="popfun()" class="add-cart cart8" type="button" name="button">Add To Cart</button></center>
+          </td>
+        </tr>
+    </table>
+    <table class="clothimg"  cellpadding="15">
+      <h3 class="dephead" >FOOTWEAR</h3>
+      <tr>
+        <td><img class="climg" src="{% static 'images/f (1).jpeg' %}" alt="" height=300em width=300em></td>
+        <td><img class="climg" src="{% static 'images/f (3).jpeg' %}" alt="" height=300em width=300em></td>
+        <td><img class="climg" src="{% static 'images/f (2).jpeg' %}" alt="" height=300em width=300em></td>
+        <td><img class="climg" src="{% static 'images/f (4).jpeg' %}" alt="" height=300em width=300em></td>
+      </tr>
+      <tr cellpadding="15">
+        <td>
+          <h6>PUMA Motorsport</h6>
+          <h6>Men White Solid Porsche Design Speedcat X Leather Sneakers</h6>
+          Product - 1301 <br>
+          Price - 10449 <br>
+          Rating   ⭐⭐⭐⭐
+          <br><br>
+          <center><button onclick="popfun()" class="add-cart cart9" type="button" name="button">Add To Cart</button></center>
+        </td>
+        <td>
+          <h6>Crocs</h6>
+          <h6>Unisex White & Beige Printed Croslite Clogs</h6>
+          Product - 1302 <br>
+          Price - 4995 <br>
+          Rating   ⭐⭐⭐⭐
+          <br><br>
+          <center><button onclick="popfun()" class="add-cart cart10" type="button" name="button">Add To Cart</button></center>
+        </td>
+        <td>
+        <h6>Puma</h6>
+        <h6>Men White & Black Colourblocked Sliders</h6>
+        Product - 1303 <br>
+        Price - 2099 <br>
+        Rating   ⭐⭐⭐⭐⭐
+        <br><br>
+        <center><button onclick="popfun()" class="add-cart cart11" type="button" name="button">Add To Cart</button></center>
+        </td>
+        <td>
+          <h6>EAKLVB </h6>
+          <h6>Ballroom Dance Exclusove Standard Shoes</h6>
+          Product - 1304 <br>
+          Price - 10252 <br>
+          Rating   ⭐⭐⭐⭐
+          <br><br>
+          <center><button onclick="popfun()" class="add-cart cart12" type="button" name="button">Add To Cart</button></center>
+        </td>
+      </tr>      </table>
+      <table class="clothimg"  cellpadding="15">
+      <h3 class="dephead" >ACCESSORIES</h3>
+        <tr>
+            <td><img class="climg" src="{% static 'images/a (1).jpeg' %}" alt="" height=300em width=300em></td>
+            <td><img class="climg" src="{% static 'images/a (3).jpeg' %}" alt="" height=300em width=300em></td>
+            <td><img class="climg" src="{% static 'images/a (2).jpeg' %}" alt="" height=300em width=300em></td>
+            <td><img class="climg" src="{% static 'images/a (4).jpeg' %}" alt="" height=300em width=300em></td>
+          </tr>
+        <tr cellpadding="15">
+          <tr cellpadding="15">
+            <td>
+              <h6>Casio </h6>
+              <h6>G-Shock Watch Water Resistant Shcok Resistant </h6>
+              Product - 1401 <br>
+              Price - 28995 <br>
+              Rating   ⭐⭐⭐⭐
+              <br><br>
+              <center><button onclick="popfun()" class="add-cart cart13" type="button" name="button">Add To Cart</button></center>
+            </td>
+            <td>
+              <h6>Ted Smith</h6>
+              <h6>Unisex Grey Lens & Black Aviator Sunglasses </h6>
+              Product - 1402 <br>
+              Price - 801 <br>
+              Rating   ⭐⭐⭐⭐
+              <br><br>
+              <center><button onclick="popfun()" class="add-cart cart14" type="button" name="button">Add To Cart</button></center>
+            </td>
+            <td>
+            <h6>Puma</h6>
+            <h6>Unisex Black & White Embroidered Snapback Cap</h6>
+            Product - 1403 <br>
+            Price - 749$<br>
+            Rating   ⭐⭐⭐⭐⭐
+            <br><br>
+            <center><button onclick="popfun()" class="add-cart cart15" type="button" name="button">Add To Cart</button></center>
+            </td>
+            <td>
+              <h6>Roadster</h6>
+              <h6>Men Silver-Toned Silver-Plated Tribal Chain</h6>
+              Product - 1404 <br>
+              Price - 330 <br>
+              Rating   ⭐⭐⭐⭐
+              <br><br>
+              <center><button onclick="popfun()" class="add-cart cart16" type="button" name="button">Add To Cart</button></center>
+            </td>
+          </tr>
+
+        </tr>
+      </table>
+
+      <div class="ending">
+          <table  cellpadding="100" >
+            <tr>
+              <td>
+                <ul>
+                   <a class="H4" href="{% url 'userterms'   %}">Terms</a>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                   <a class="H4" href="{% url 'userabout'   %}">About</a>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <a class="H4" href="{% url 'usercontact'   %}">Contact</a>
+
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <a class="H4" href="{% url 'userhelp'   %}">Help</a>
+                </ul>
+              </td>
+            </tr>
+          </table>
+        <div class="logos">
+          <a  href="https://www.facebook.com/saideep.chakilam.1"><img src="{% static 'images/fb.png' %}" alt="" height=45em width=30em></a>
+          <a href="https://twitter.com/imVkohli"><img src="{% static 'images/tw.png' %}" alt="" height=45em width=30em></a>
+          <a href="https://www.instagram.com/sriharsha_sutrave/"><img src="{% static 'images/insta.png' %}" alt="" height=45em width=30em></a>
+        </div>
+
+        <br><br><br>
+        <center class="H4"> © Copyright 2022. All Rights Reserved.</center>
+    </div>
+
+    <script type="text/javascript">
+function popfun(){
+  alert("Added to cart");
+}
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script src="{% static '/js/cloth.js' %}"></script>
+  </body>
+</html>
